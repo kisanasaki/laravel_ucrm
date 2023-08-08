@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  ucrm-db:
+    container_name: ucrmdb
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: ucrm-db
+      MYSQL_USER: laravel_ucrm
+      MYSQL_PASSWORD: password
+    # ポート割り当て
+    ports:
+      - "3306:3306"
